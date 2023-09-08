@@ -1,0 +1,44 @@
+<!-- views/flight-details.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Details</title>
+</head>
+<body>
+  <!-- flight-details.ejs -->
+<h1>Flight Details</h1>
+
+<ul>
+  <li><strong>Airline:</strong> <%= flight.airline %></li>
+  <li><strong>Airport:</strong> <%= flight.airport %></li>
+  <li><strong>Flight Number:</strong> <%= flight.flightNo %></li>
+  <li><strong>Departure Date/Time:</strong> <%= flight.departs %></li>
+</ul>
+
+<h2>Destinations</h2>
+<ul>
+  <% flight.destinations.forEach(destination => { %>
+    <li>
+      <strong>Airport:</strong> <%= destination.airport %><br>
+      <strong>Arrival Date/Time:</strong> <%= destination.arrival %>
+    </li>
+  <% }); %>
+</ul>
+
+<h2>Add Destination</h2>
+<form action="/flights/<%= flight._id %>/destinations" method="POST">
+  <label for="airport">Airport:</label>
+  <select name="airport" id="airport">
+    <option value="AUS">Austin-Bergstrom International Airport (AUS)</option>
+    <option value="DFW">Dallas/Fort Worth International Airport (DFW)</option>
+    <option value="DEN">Denver International Airport (DEN)</option>
+    <option value="LAX">Los Angeles International Airport (LAX)</option>
+    <option value="SAN">San Diego International Airport (SAN)</option>
+  </select>
+  <label for="arrival">Arrival Date/Time:</label>
+  <input type="datetime-local" name="arrival" id="arrival" required>
+  <button type="submit">Add Destination</button>
+</form>
