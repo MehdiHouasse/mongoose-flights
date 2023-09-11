@@ -1,8 +1,90 @@
+/* Apply styles to the body element */
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Create a single column layout */
+  grid-template-rows: auto 1fr auto;
+  /* Create rows for header, content, and footer */
+  min-height: 100vh;
+  /* Ensure the grid takes up at least the full viewport height */
 }
 
-a {
-  color: #00B7FF;
+/* Style the header with a background color and center text */
+h1 {
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  grid-column: 1 / -1;
+  /* Span the full width of the grid */
+}
+
+/* Style the navigation bar */
+ul {
+  background-color: #f0f0f0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  grid-column: 1 / -1;
+  /* Span the full width of the grid */
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #ddd;
+}
+
+/* Style the flight list */
+ul li {
+  background-color: #fff;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  grid-column: 1 / -1;
+  /* Span the full width of the grid */
+}
+
+/* Style the detail link */
+ul li a.detail {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+ul li a.detail:hover {
+  background-color: #258cd1;
+}
+
+/* Style the footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  grid-column: 1 / -1;
+  /* Span the full width of the grid */
 }

@@ -1,11 +1,12 @@
-<!-- views/flight-details.ejs -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flight Details</title>
+
+  <!-- Include the link to your CSS file here -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styleDetail.css">
 </head>
 <body>
   <!-- flight-details.ejs -->
@@ -16,6 +17,7 @@
   <li><strong>Airport:</strong> <%= flight.airport %></li>
   <li><strong>Flight Number:</strong> <%= flight.flightNo %></li>
   <li><strong>Departure Date/Time:</strong> <%= flight.departs %></li>
+  <a href="/flights">Back to All Flights</a>
 </ul>
 
 <h2>Destinations</h2>
@@ -27,7 +29,7 @@
     </li>
   <% }); %>
 </ul>
-
+<a href="/flights/tickets">View Tickets</a>
 <h2>Add Destination</h2>
 <form action="/flights/<%= flight._id %>/destinations" method="POST">
   <label for="airport">Airport:</label>
@@ -42,3 +44,5 @@
   <input type="datetime-local" name="arrival" id="arrival" required>
   <button type="submit">Add Destination</button>
 </form>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+/* Reset some default browser styles */
+body,
+ul,
+li,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 20px;
+}
+
+/* Header styles */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Main content container */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Links styles */
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+/* Links on hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="datetime-local"],
+button {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styling for the "Add Destination" button */
+button[type="submit"] {
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+}
+
+/* Styling for the "Back to All Flights" and "View Tickets" links */
+a[href="/flights"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+a[href="/flights/tickets"] {
+  background-color: #0077cc;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/* Styling for the "Destinations" section */
+h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}

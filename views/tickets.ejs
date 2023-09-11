@@ -1,0 +1,12 @@
+<!-- Inside views/tickets/new.ejs -->
+<form action="/flights/<%= flightId %>/tickets" method="POST">
+  <!-- Form fields for ticket details (seat, price, etc.) -->
+  <label for="seat">Seat:</label>
+  <input type="text" id="seat" name="seat" required>
+
+  <label for="price">Price:</label>
+  <input type="number" id="price" name="price" min="0" required>
+
+  <!-- Submit button -->
+  <button type="submit">Create Ticket</button>
+</form>
