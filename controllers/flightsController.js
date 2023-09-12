@@ -49,7 +49,7 @@ async function addFlight(req, res) {
   }
 }
 
-// Controller function for displaying flight details
+// Controller function for displaying flightdetails
 async function showFlightDetails(req, res) {
   try {
     const flightId = req.params.id;
